@@ -22,6 +22,24 @@
   	<description></description>
   	<servlet-class>com.controller.StudentLoginController</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>TeacherLoginController</servlet-name>
+  	<display-name>TeacherLoginController</display-name>
+  	<description></description>
+  	<servlet-class>com.controller.TeacherLoginController</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>LearnProController</servlet-name>
+  	<display-name>LearnProController</display-name>
+  	<description></description>
+  	<servlet-class>com.controller.LearnProController</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>LearnproController</servlet-name>
+  	<display-name>LearnproController</display-name>
+  	<description></description>
+  	<servlet-class>com.controller.LearnProController</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>StudentController</servlet-name>
   	<url-pattern>/StudentController</url-pattern>
@@ -33,5 +51,17 @@
   <servlet-mapping>
   	<servlet-name>StudentLoginController</servlet-name>
   	<url-pattern>/StudentLoginController</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>TeacherLoginController</servlet-name>
+  	<url-pattern>/TeacherLoginController</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>LearnProController</servlet-name>
+  	<url-pattern>/LearnProController</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>LearnproController</servlet-name>
+  	<url-pattern>/LearnproController</url-pattern>
   </servlet-mapping>
 </web-app>

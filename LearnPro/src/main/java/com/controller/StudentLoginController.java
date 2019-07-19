@@ -1,6 +1,7 @@
 package com.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -22,21 +23,42 @@ public class StudentLoginController extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+		PrintWriter out=response.getWriter();
 		StudentInfo studLogin = new StudentInfo();
+		String asl=request.getParameter("login");
+		out.print(asl);
 	    String userName = request.getParameter("Email");
 	    String password = request.getParameter("Password");
 	    
-	    StudentDao sd=new StudentDaoImpl();
-	    if(sd.loginStudent(userName, password)==true)
+	    if(asl.equals("student"))
 	    {
-	    	RequestDispatcher rd=request.getRequestDispatcher("StudentRegistration.jsp");
-	    	rd.forward(request, response);
+	    	StudentDao sd=new StudentDaoImpl();
+	    	if(sd.loginStudent(userName, password)==true)
+	    	{
+	    		RequestDispatcher rd=request.getRequestDispatcher("StudentRegistration.jsp");
+	    		rd.forward(request, response);
+	    	}
+	    	else
+	    	{
+	    		RequestDispatcher rd=request.getRequestDispatcher("Login.jsp");
+	    		rd.forward(request, response);
+	    	}
 	    }
-	    else
+	    else if(asl.equals("teacher"))
 	    {
-	    	RequestDispatcher rd=request.getRequestDispatcher("StudentLogin.jsp");
-	    	rd.forward(request, response);
+	    	StudentDao sd=new StudentDaoImpl();
+		    if(sd.loginStudent(userName, password)==true)
+		    {
+		    	RequestDispatcher rd=request.getRequestDispatcher("TeacherRegistration.jsp");
+		    	rd.forward(request, response);
+		    }
+		    else
+		    {
+		    	RequestDispatcher rd=request.getRequestDispatcher("Login.jsp");
+		    	rd.forward(request, response);
+		    }
 	    }
+	    
 	}
 
 	

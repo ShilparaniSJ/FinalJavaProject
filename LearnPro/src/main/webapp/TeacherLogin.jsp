@@ -21,30 +21,28 @@
 </head>
 <body>
 
-	<form>
-		<h2><center>Login</center></h2>
-			<div class="container mt-5">
-            	<form>
-	                <div class="form-group row">
-	                   <label class="col-2">UserName</label>
-	                   <input type="text" class="form-control col-8" placeholder="Enter your Username">
-	                </div>
+<h2><center>Login</center></h2>
+
+	 <div class="container mt-5">
+            <form method="post" action="TeacherLoginController">
+                <div class="form-group row">
+                    <label class="col-2">UserName</label>
+                    <input type="text" name="Email" placeholder="Enter Email" class="form-control col-8">
+                </div>
               
-	                <div class="form-group row">
-	                    <label class="col-2">Password</label>
-	                    <input type="text" class="form-control col-8" placeholder="Enter your Username">
-	                </div>
-	               <center> <input type="button" CLASS="form-group row btn btn-primary col-2" value="submit"> </center>
-	                
-                </form>
-                
-                <br>
-            </div>
-            
-	        <center>
-				<a href="ForgotPassword.jsp">Forgot Passsword?</a><br>
-				<a href="TeacherRegistration.jsp">New Registration?</a>
-			</center>
-	 </form>
+              <div class="form-group row">
+                    <label class="col-2">Password</label>
+                    <input type="text" name="Password" placeholder="Enter Password" class="form-control col-8">
+                </div>
+              
+                 <center> <input type="submit" class="form-group row btn btn-primary col-2" value="submit"> </center>                             
+              
+            </form><br>
+         
+        </div>
+        <center>
+<a href="ForgotPassword.jsp">Forgot Passsword?</a><br>
+<a href="StudentRegistration.jsp">New Registration?</a></center>
+
 </body>
 </html>

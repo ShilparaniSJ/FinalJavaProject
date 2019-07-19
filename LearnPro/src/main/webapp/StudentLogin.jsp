@@ -25,6 +25,17 @@
 
 	 <div class="container mt-5">
             <form method="post" action="StudentLoginController">
+            
+              <div class="form-group row">
+                    <label class="col-2">Login As</label>
+                    <select name="login">
+  						<option value="student">Student</option>
+  						<option value="teacher">Teacher</option> 
+  						<option value="Admin">Admin</option> 
+					</select>
+                    
+                </div>
+                
                 <div class="form-group row">
                     <label class="col-2">UserName</label>
                     <input type="text" name="Email" placeholder="Enter Email" class="form-control col-8">
@@ -43,6 +54,7 @@
         <center>
 <a href="ForgotPassword.jsp">Forgot Passsword?</a><br>
 <a href="StudentRegistration.jsp">New Registration?</a></center>
+
 
 </body>
 </html>
